@@ -1,8 +1,8 @@
 package com.example.openinapp.data
 
 import android.content.Context
-import com.example.openinapp.TokenManager
 import com.example.openinapp.data.api.DashboardApiService
+import com.example.openinapp.data.local.TokenManager
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -18,7 +18,7 @@ object RetrofitInstance {
                 val token = tokenManager.getToken()
                 val requestBuilder = original.newBuilder()
                 token?.let {
-                    requestBuilder.header("Authorization", "Bearer $it")
+                    requestBuilder.header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU5MjcsImlhdCI6MTY3NDU1MDQ1MH0.dCkW0ox8t bjJA2GgUx2UEwNlbTZ7Rr38PVFJevYcXFI")
                 }
                 val request = requestBuilder.build()
                 chain.proceed(request)
