@@ -11,7 +11,7 @@ class TokenManager(context: Context) {
     private val gson = Gson()
 
     companion object {
-        private const val TOKEN_KEY = "token_key"
+        private const val TOKEN_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjU5MjcsImlhdCI6MTY3NDU1MDQ1MH0.dCkW0ox8t bjJA2GgUx2UEwNlbTZ7Rr38PVFJevYcXFI"
         private const val DATA_KEY = "dashboard_data"
     }
 
